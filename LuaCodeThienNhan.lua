@@ -77,62 +77,42 @@ local function v4(v186, v187)
     v188.CornerRadius = UDim.new(0, v186);
     v188.Parent = v187;
 end
-
 local v5 = CreateObject("ScreenGui", {
     Name = "Core",
     Parent = game.CoreGui
-})
-
-local bg = CreateObject("ImageLabel", {
-    Name = "BackgroundImage",
-    Parent = v5,
-    BackgroundTransparency = 1,
-    Image = "rbxassetid://93325972724000", 
-    Position = UDim2.new(0, 0, 0, 0),
-    Size = UDim2.new(1, 0, 1, 0),
-    ZIndex = 0
-})
-
+});
 local v6 = CreateObject("Frame", {
     Name = "Main",
     Parent = v5,
-    BackgroundColor3 = Color3.fromRGB(40, 40, 40),
+    BackgroundColor3 = v2.LoaderData.Colors.Main,
     BorderSizePixel = 0,
     ClipsDescendants = true,
     Position = UDim2.new(0.5, 0, 0.5, 0),
     AnchorPoint = Vector2.new(0.5, 0.5),
-    Size = UDim2.new(0, 0, 0, 0),
-    ZIndex = 1
-})
-v4(12, v6)
-
+    Size = UDim2.new(0, 0, 0, 0)
+});
+v4(12, v6);
 local v7 = CreateObject("ImageLabel", {
     Name = "UserImage",
     Parent = v6,
     BackgroundTransparency = 1,
-    Image = "rbxassetid://96474653496642",
+    Image = "rbxassetid://98216492508597",
     Position = UDim2.new(0, 15, 0, 10),
-    Size = UDim2.new(0, 50, 0, 50),
-    ZIndex = 2
-})
-v4(25, v7)
-
+    Size = UDim2.new(0, 50, 0, 50)
+});
+v4(25, v7);
 local v8 = CreateObject("TextLabel", {
     Name = "UserName",
     Parent = v6,
     BackgroundTransparency = 1,
-    Text = "Youtube: ThienNhan",
+    Text = "Youtube: Trongnguyen",
     Position = UDim2.new(0, 75, 0, 10),
     Size = UDim2.new(0, 200, 0, 50),
     Font = Enum.Font.GothamBold,
-    TextColor3 = Color3.fromRGB(255, 255, 255),
+    TextColor3 = v2.LoaderData.Colors.Title,
     TextSize = 14,
-    TextXAlignment = Enum.TextXAlignment.Left,
-    ZIndex = 2
-})
-
-TweenObject(v6, 0.5, {Size = UDim2.new(0, 500, 0, 320)})
-
+    TextXAlignment = Enum.TextXAlignment.Left
+});
 local v9 = CreateObject("TextLabel", {
     Name = "Top",
     TextTransparency = 1,
@@ -331,9 +311,8 @@ v5:Destroy();
 --         pcall(v422);
 --     end
 -- end);
-local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))();
-
-local Window = Fluent:CreateWindow({
+local v14 = loadstring(game:HttpGet("https://raw.githubusercontent.com/tadevtechathority/Flunet/refs/heads/main/main_luacode.lua"))();
+local v15 = v14:CreateWindow({
     Title = "AndepZai Hub",
     SubTitle = "Premium Script",
     TabWidth = 160,
@@ -341,7 +320,7 @@ local Window = Fluent:CreateWindow({
     Acrylic = false,
     Size = UDim2.fromOffset(500, 320),
     MinimizeKey = Enum.KeyCode.End
-})
+});
 local v16 = {
     Home = v15:AddTab({
         Title = "Thông Tin"
@@ -2654,7 +2633,7 @@ v23.BorderSizePixel = 0;
 v23.Position = UDim2.new(0.120833337 - 0.1, 0, 0.0952890813 + 0.01, 0);
 v23.Size = UDim2.new(0, 50, 0, 50);
 v23.Draggable = true;
-v23.Image = "http://www.roblox.com/asset/?id=96474653496642";
+v23.Image = "http://www.roblox.com/asset/?id=98216492508597";
 v24.Parent = v23;
 v24.CornerRadius = UDim.new(0, 12);
 v25.Parent = v23;
