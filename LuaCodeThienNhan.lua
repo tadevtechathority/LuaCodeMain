@@ -311,7 +311,7 @@ v5:Destroy();
 --         pcall(v422);
 --     end
 -- end);
-local v14 = loadstring(game:HttpGet("https://raw.githubusercontent.com/tadevtechathority/Flunet/refs/heads/main/main_luacode.lua"))();
+local v14 = loadstring(game:HttpGet("https://raw.githubusercontent.com/tadevtechathority/Flunet/main/c%E1%BA%A1c_fixed.lua"))();
 local v15 = v14:CreateWindow({
     Title = "AndepZai Hub",
     SubTitle = "Premium Script",
