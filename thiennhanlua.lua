@@ -96,7 +96,7 @@ local v7 = CreateObject("ImageLabel", {
     Name = "UserImage",
     Parent = v6,
     BackgroundTransparency = 1,
-    Image = "rbxassetid://98216492508597",
+    Image = "rbxassetid://119662413193585",
     Position = UDim2.new(0, 15, 0, 10),
     Size = UDim2.new(0, 50, 0, 50)
 });
@@ -311,17 +311,6 @@ v5:Destroy();
 --         pcall(v422);
 --     end
 -- end);
-local v14 = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))();
-local v15 = v14:CreateWindow({
-    Title = "AndepZai Hub",
-    SubTitle = "Premium Script",
-    TabWidth = 160,
-    Theme = "Dark",
-    Acrylic = false,
-    Size = UDim2.fromOffset(500, 320),
-    MinimizeKey = Enum.KeyCode.End
-});
--- đoạn gốc của bạn
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))();
 
 local Window = Fluent:CreateWindow({
@@ -332,23 +321,25 @@ local Window = Fluent:CreateWindow({
     Acrylic = false,
     Size = UDim2.fromOffset(500, 320),
     MinimizeKey = Enum.KeyCode.End
-});
-local gui = Window.Window
-local bg = Instance.new("ImageLabel")
-bg.Name = "BackgroundImage"
-bg.Parent = gui
-bg.BackgroundTransparency = 1
-bg.Size = UDim2.new(1,0,1,0)
-bg.Position = UDim2.new(0,0,0,0)
-bg.Image = "rbxassetid://99907780705808"
-bg.ZIndex = 0
+})
 
-for _,v in ipairs(gui:GetDescendants()) do
-    if v:IsA("GuiObject") and v ~= bg then
-        v.ZIndex = (v.ZIndex or 1) + 1
+task.delay(0.5, function()
+    local screenGui = Window.Window and Window.Window:FindFirstAncestorOfClass("ScreenGui")
+    if not screenGui then
+        warn("Không tìm thấy ScreenGui")
+        return
     end
-end
 
+    -- tạo ảnh nền
+    local bg = Instance.new("ImageLabel")
+    bg.Name = "BackgroundImage"
+    bg.Parent = screenGui
+    bg.BackgroundTransparency = 1
+    bg.Size = UDim2.new(1,0,1,0) 
+    bg.Position = UDim2.new(0,0,0,0)
+    bg.Image = "rbxassetid://119662413193585" 
+    bg.ZIndex = -1 -- 
+end)
 local v16 = {
     Home = v15:AddTab({
         Title = "Thông Tin"
@@ -2661,7 +2652,7 @@ v23.BorderSizePixel = 0;
 v23.Position = UDim2.new(0.120833337 - 0.1, 0, 0.0952890813 + 0.01, 0);
 v23.Size = UDim2.new(0, 50, 0, 50);
 v23.Draggable = true;
-v23.Image = "http://www.roblox.com/asset/?id=98216492508597";
+v23.Image = "http://www.roblox.com/asset/?id=119662413193585";
 v24.Parent = v23;
 v24.CornerRadius = UDim.new(0, 12);
 v25.Parent = v23;
